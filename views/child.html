@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Express3</title>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+<h1>Express3</h1>
+<button id="button">Cors跨域请求</button>
+<script>
+$(function () {
+    $("#button").click(function () {
+        $.ajax({
+            url: 'http://localhost:10001/get',
+            type: 'get',
+            success: function (data) {
+                console.log(data)
+            },
+            error: function (err) {
+                console.log(err)
+            }
+        })
+    })
+})
+</script>
+</body>
+</html>
