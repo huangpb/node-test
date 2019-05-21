@@ -13,6 +13,13 @@ app.get('/v1/home', function(req, res) {
     })
 })
 
+app.post('/security/login', function(req, res) {
+    fs.readFile(__dirname + '/login.json', 'utf8', function(err, data) {
+        res.json(data);
+        res.end();
+    })
+})
+
 app.listen(8081, function() {
     console.log('http://localhost:8081')
 });
